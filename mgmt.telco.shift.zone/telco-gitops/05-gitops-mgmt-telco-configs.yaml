@@ -9,7 +9,7 @@ spec:
     - git:
         directories:
           - path: mgmt.telco.shift.zone/config-*
-        repoURL: 'https://github.com/openshift-telco/telco-gitops-mgmt.git'
+        repoURL: 'https://github.com/nsatsia/telco-gitops-mgmt.git'
         revision: HEAD
   template:
     metadata:
@@ -22,5 +22,5 @@ spec:
       project: default
       source:
         path: '{{path}}'
-        repoURL: 'https://github.com/openshift-telco/telco-gitops-mgmt.git'
+        repoURL: 'https://github.com/nsatsia/telco-gitops-mgmt.git'
         targetRevision: HEAD

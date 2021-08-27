@@ -11,7 +11,7 @@ spec:
     namespace: 'telco-gitops'
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: 'https://github.com/openshift-telco/telco-gitops-mgmt.git'
+    repoURL: 'https://github.com/nsatsia/telco-gitops-mgmt.git'
     targetRevision: HEAD
     path: mgmt.telco.shift.zone
     directory:

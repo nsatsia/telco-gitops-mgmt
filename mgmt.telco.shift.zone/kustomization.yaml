@@ -3,8 +3,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 commonLabels:
-  telco-gitops/cluster-name: mgmt.telco.shift.zone
-  topology.kubernetes.io/region: mgmt.telco.shift.zone
+  telco-gitops/cluster-name: ocpmgmt.lab.diktio.net
+  topology.kubernetes.io/region: ocpmgmt.lab.diktio.net
   # Each SITE_ID is a different zone
   #topology.kubernetes.io/zone: sample-zone
 
@@ -16,21 +16,21 @@ commonAnnotations:
 
 bases:
   # Common Operators
-  - github.com/openshift-telco/telco-gitops/base/configs/all-common?ref=main
+  - github.com/nsatsia/telco-gitops/base/configs/all-common?ref=main
   # Operators for MGMT Clusters
-  - github.com/openshift-telco/telco-gitops/blueprints/mgmt?ref=main
+  - github.com/nsatsia/telco-gitops/blueprints/mgmt?ref=main
   # Hive
-  - github.com/openshift-telco/telco-gitops/base/operators/hive
+  - github.com/nsatsia/telco-gitops/base/operators/hive
   # Red Hat Advanced Cluster Manager for Kubernetes
-  # - github.com/openshift-telco/telco-gitops/base/operators/advanced-cluster-management?ref=main
+  # - github.com/nsatsia/telco-gitops/base/operators/advanced-cluster-management?ref=main
   # OpenShift Container storage
-  # - github.com/openshift-telco/telco-gitops/base/operators/openshift-container-storage?ref=main
+  - github.com/nsatsia/telco-gitops/base/operators/openshift-container-storage?ref=main
   # OpenShiftVirt
-  # - github.com/openshift-telco/telco-gitops/base/operators/openshift-virtualization?ref=main
+  # - github.com/nsatsia/telco-gitops/base/operators/openshift-virtualization?ref=main
   # Quay Enterprise
-  # - github.com/openshift-telco/telco-gitops/base/operators/quay-enterprise-operator?ref=main
+  - github.com/nsatsia/telco-gitops/base/operators/quay-enterprise-operator?ref=main
   # OpenShift Logging
-  # - github.com/openshift-telco/telco-gitops/base/operators/openshift-logging?ref=main
+  # - github.com/nsatsia/telco-gitops/base/operators/openshift-logging?ref=main
   # Configure telco-gitops for cluster
   - ./telco-gitops
 

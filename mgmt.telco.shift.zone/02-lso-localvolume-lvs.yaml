@@ -24,3 +24,4 @@ spec:
       devicePaths: 
         - /dev/autopart/lv_4 
         - /dev/autopart/lv_5
+        - /dev/autopart/lv_6
