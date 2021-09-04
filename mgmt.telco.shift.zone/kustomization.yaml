@@ -35,5 +35,5 @@ bases:
   - ./telco-gitops
 
 resources:
-  - 01-master-create-lvs-for-lso.yaml
-  - 02-lso-localvolume-lvs.yaml
+  #- 01-master-create-lvs-for-lso.yaml
+  #- 02-lso-localvolume-lvs.yaml
