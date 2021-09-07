@@ -4,10 +4,10 @@ apiVersion: v1
 kind: Secret
 metadata:
   # Redfish BMC with sushy-tools
-  name: bmc-telco-kvm02-sushy
+  name: bmc-hypervisor4-sushy
   namespace: assisted-installer
 data:
   # update to match actual credentials
-  username: "YWRtaW4="
-  password: "cGFzc3dvcmQ="
+  username: "cm9vdAo="
+  password: "UmVkaGF0MDEK"
 type: Opaque

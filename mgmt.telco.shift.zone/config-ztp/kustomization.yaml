@@ -7,4 +7,4 @@ commonAnnotations:
 
 resources:
   - 00-hook-postsync-csv.yaml
-  # - 05-telco-gitops-ztp.yaml
+  - 05-telco-gitops-ztp.yaml
