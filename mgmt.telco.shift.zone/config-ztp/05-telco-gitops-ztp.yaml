@@ -16,6 +16,9 @@ spec:
       name: '01-ztp-{{path.basename}}'
       namespace: telco-gitops
     spec:
+      syncpolicy:
+        automated: {}
+#        selfHeal: true        
       destination:
         namespace: telco-gitops
         server: 'https://kubernetes.default.svc'

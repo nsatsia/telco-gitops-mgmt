@@ -74,7 +74,7 @@ error: unable to recognize ".": no matches for kind "MultiClusterHub" in version
 - To obtain the password for `telco-gitops` ArgoCD `admin`
   
     ```bash
-    oc get secret telco-gitops-cluster -o go-template='{{index .data "admin.password"}}' | base64 -d
+    oc get secret -n telco-gitops telco-gitops-cluster -o go-template='{{index .data "admin.password"}}' | base64 -d
     ```
 
 ## Define a cluster for ArgoCD
@@ -92,7 +92,9 @@ curl -L -o argocd https://github.com/argoproj/argo-cd/releases/download/v2.0.5/a
 - Login into the ArgoCD instance in the management cluster using ArgoCD CLI. You will be prompted for the ArgoCD `admin` password.
 
     ```bash
-    argocd login https://api.mgmt.telco.shift.zone:6443 --name admin
+    # User admin, password from above
+    argocd login telco-gitops-server-telco-gitops.apps.ocpmgmt.lab.diktio.net
+    ---argocd login https://api.mgmt.telco.shift.zone:6443 --name admin---
     ```
 
 - List clusters
