@@ -22,7 +22,7 @@ The following information will be required:
 - Rados Server Hostname: \<ServerFqdnOrIp\>
 - Custom Port (optional):	\<Port\>
 - Access Key:	\<AccessKey\>
-- Secret Key:	\<SeretKey\>
+- Secret Key:	\<SecretKey\>
 - Bucket Name: \<BucketName\>
 
 Once logged into the Quay config editor then scroll down to the "Registry Storage" section and select "Edit fields" (see below).
@@ -41,7 +41,7 @@ Enter the required information as indicated by the arrows below then select "Val
 
 ---
 
-A popup window will appear with a status of "CONFIGURATION VALIDATED", if not the select "Continue Editing" and correct the error before retryng. To submit the config, select "Reconfigure Quay".
+A popup window will appear with a status of "CONFIGURATION VALIDATED", if not the select "Continue Editing" and correct the error before retrying. To submit the config, select "Reconfigure Quay".
 ---
 
 ![Quay Submit Edit](quay-config-3.png)

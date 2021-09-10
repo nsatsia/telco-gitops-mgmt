@@ -24,6 +24,26 @@ On 1st login to the site you will need to create a user, select "Create Account"
 
 ---
 
-Create user nsatsia
-registries (public) ocp485 and ocpmetal485 (public)
+Once the account is created, login and create 2 "public" repositories names "ocp485" and "ocpmetal485" as illustrated below.
 
+
+---
+<p align="center">
+  <img src="quay-config-6.png" alt="drawing" width="400"/>
+</p>
+
+---
+
+---
+<p align="center">
+  <img src="quay-config-7.png" alt="drawing" width="400"/>
+</p>
+
+---
+
+---
+<p align="center">
+  <img src="quay-config-8.png" alt="drawing" width="400"/>
+</p>
+
+---
