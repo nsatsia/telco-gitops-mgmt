@@ -40,7 +40,7 @@ oc create secret generic \
     --from-file config.yaml=config.yaml \
     --from-file ssl.cert=lab-registry.crt.pem \
     --from-file ssl.key=lab-registry.key.pem \
-    -n quay-enterprise \
+    -n openshift-operators \
     lab-quay-config-bundle
 ```
 
@@ -51,7 +51,7 @@ apiVersion: quay.redhat.com/v1
 kind: QuayRegistry
 metadata:
   name: lab
-  namespace: quay-enterprise
+  namespace: openshift-operators
 spec:
   components:
     - kind: clair
@@ -69,7 +69,7 @@ spec:
     - kind: mirror
       managed: true
     - kind: monitoring
-      managed: false
+      managed: true
   configBundleSecret: lab-quay-config-bundle
 EOF
 

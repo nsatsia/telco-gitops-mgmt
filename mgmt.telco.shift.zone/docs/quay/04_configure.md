@@ -1,6 +1,6 @@
 ## Get the Quay config editor URL
 ```bash
-oc get route -n quay-enterprise | egrep quay-config-editor | awk '{print $2}'
+oc get route -n openshift-operators | egrep quay-config-editor | awk '{print $2}'
 ```
 
 ## Get the Quay config editor password
@@ -10,8 +10,8 @@ Unfortunately, depending on which of the 3 editor pods you hit, you will have a 
 
 The following will extract the 3 passwords:
 ```bash
-for i in $(oc get secret -n quay-enterprise | egrep quay-config-editor | awk '{print $1}'); do \
-  oc get secret -n quay-enterprise $i -o json | egrep password | awk -F '"' '{print $4}' | base64 -d
+for i in $(oc get secret -n openshift-operators | egrep quay-config-editor | awk '{print $1}'); do \
+  oc get secret -n openshift-operators $i -o json | egrep password | awk -F '"' '{print $4}' | base64 -d
   echo
 done
 ```

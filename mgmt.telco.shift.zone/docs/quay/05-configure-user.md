@@ -1,8 +1,8 @@
 
-## Get the local Quay-Enterprise URL
+## Get the local openshift-operators URL
 
 ```bash
-oc get route -n quay-enterprise | egrep "\-quay " | awk '{print $2}'
+oc get route -n openshift-operators | egrep "\-quay " | awk '{print $2}'
 ```
 This URL **must** match the FQDN of the certificate you previously created.
 
