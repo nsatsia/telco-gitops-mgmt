@@ -24,7 +24,7 @@ On 1st login to the site you will need to create a user, select "Create Account"
 
 ---
 
-Once the account is created, login and create 2 "public" repositories names "ocp485" and "ocpmetal485" as illustrated below.
+Once the account is created, login and create 2 "public" repositories names "ocp4811" and "ocpmetal4811" as illustrated below.
 
 
 ---

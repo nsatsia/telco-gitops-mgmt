@@ -1,5 +1,5 @@
 # Mirror OCP images 
-In this example we will be mirroring OCP 4.8.5
+In this example we will be mirroring OCP 4.8.11
 
 These instructions were based on the following reference:
     https://docs.openshift.com/container-platform/4.8/installing/installing-mirroring-installation-images.html
@@ -30,11 +30,11 @@ cp ~/pull-secret-update.json ~/.docker/config.json
 Set environment variables to reflect the selected version of OCP and the Quay local repository FQDN.
 
 ```bash
-export OCP_RELEASE=4.8.5
+export OCP_RELEASE=4.8.11
 export RELEASE_IMAGE=$(curl -s https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$OCP_RELEASE/release.txt | grep 'Pull From: quay.io' | awk -F ' ' '{print $3}'); echo $RELEASE_IMAGE
 export UPSTREAM_REPO=${RELEASE_IMAGE}
 export LOCAL_REGISTRY='lab-registry.ocpmgmt.lab.diktio.net'
-export LOCAL_REPOSITORY='nsatsia/ocp485'
+export LOCAL_REPOSITORY='nsatsia/ocp4811'
 ```
 
 Begin the mirroring as per the oc command below, approximately 11GB of data will be downloaded.
@@ -65,7 +65,7 @@ done
 
 oc image mirror  quay.io/openshift/origin-cli:latest lab-registry.ocpmgmt.lab.diktio.net/nsatsia/origin-cli:latest
 
-oc -a pull-secret-update.json image mirror quay.io/openshift-release-dev/ocp-release:4.8.5-x86_64 lab-registry.ocpmgmt.lab.diktio.net/nsatsia/ocp-release:4.8.5-x86_64 --insecure=true
+oc -a pull-secret-update.json image mirror quay.io/openshift-release-dev/ocp-release:4.8.11-x86_64 lab-registry.ocpmgmt.lab.diktio.net/nsatsia/ocp-release:4.8.11-x86_64 --insecure=true
 
-oc -a pull-secret-update.json image mirror quay.io/openshift-release-dev/ocp-release@sha256:90a2381b1083aa91f1b635727d7852eb359405cf009ce11fc8dc726f0e00d43a lab-registry.ocpmgmt.lab.diktio.net/nsatsia/ocp485 --insecure=true
+oc -a pull-secret-update.json image mirror quay.io/openshift-release-dev/ocp-release@sha256:90a2381b1083aa91f1b635727d7852eb359405cf009ce11fc8dc726f0e00d43a lab-registry.ocpmgmt.lab.diktio.net/nsatsia/ocp4811 --insecure=true
 
