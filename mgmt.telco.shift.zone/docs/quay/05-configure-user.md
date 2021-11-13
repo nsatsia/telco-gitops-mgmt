@@ -24,7 +24,9 @@ On 1st login to the site you will need to create a user, select "Create Account"
 
 ---
 
-Once the account is created, login and create 2 "public" repositories names "ocp4811" and "ocpmetal4811" as illustrated below.
+Once the account is created, login and create 2 "public" repositories names "ocp4817" and "ocpmetal4817" as illustrated below.
+
+**ADJUST** numbering to reflect the release you will mirror
 
 
 ---
